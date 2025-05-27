@@ -8,7 +8,7 @@ const AddUser = () => {
 
   const handleAddUser = async (userData) => {
     try {
-      await axios.post("/users", userData);
+      await axios.post("/user", userData);
       alert("User added successfully");
       navigate("/");
     } catch (error) {

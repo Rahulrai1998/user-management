@@ -23,7 +23,7 @@ const EditUser = () => {
 
   const handleUpdateUser = async (updatedData) => {
     try {
-      await axios.put(`/users/${id}`, updatedData);
+      await axios.put(`/user/${id}`, updatedData);
       alert('User updated successfully');
       navigate('/');
     } catch (error) {

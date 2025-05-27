@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import axios from '../api/axiosInstance'; // your axios setup
+import axios from '../api/axiosInstance'; 
 
 const UsersList = () => {
   const [users, setUsers] = useState([]);
@@ -20,7 +20,7 @@ const UsersList = () => {
   const deleteUser = async (id) => {
     if (!window.confirm('Are you sure you want to delete this user?')) return;
     try {
-      await axios.delete(`/users/${id}`);
+      await axios.delete(`/user/${id}`);
       setUsers(users.filter(u => u._id !== id));
     } catch (error) {
       console.error(error);
